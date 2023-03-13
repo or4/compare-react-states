@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import EasyComp from "./components/easy-comp";
+import MstComp from "./components/mst-comp";
+import ReactComp from "./components/react-comp";
+
+import "./App.css";
+
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {false && <ReactComp />}
+        {true && <MstComp />}
+
+        {false && <EasyComp />}
       </header>
     </div>
   );
-}
+};
 
 export default App;
