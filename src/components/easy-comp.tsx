@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { EasyStateProvider, GlobalContext } from "../stores/EasyStateProvider";
+import { EasyContext, EasyStateProvider } from "../stores/EasyStateProvider";
 import { User } from "../stores/types";
 import { maxCount } from "./constants";
 
@@ -15,7 +15,7 @@ const UserComp = view(({ user }: { user: User }) => {
 });
 
 const EasyComp = view(() => {
-  const store = useContext(GlobalContext);
+  const store = useContext(EasyContext);
 
   return (
     <div>
